@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Success</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', sans-serif;
+      height: 100vh;
+      background: radial-gradient(ellipse at center, #0b0c1a 0%, #000000 100%);
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+    }
+
+    body::before {
+      content: "";
+      position: absolute;
+      width: 200%;
+      height: 200%;
+      background: url('https://www.transparenttextures.com/patterns/stardust.png');
+      animation: moveStars 100s linear infinite;
+      opacity: 0.2;
+      z-index: 0;
+    }
+
+    @keyframes moveStars {
+      0% { transform: translate(0, 0); }
+      100% { transform: translate(-50%, -50%); }
+    }
+
+    .portal {
+      position: absolute;
+      width: 300px;
+      height: 300px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(255, 204, 102, 0.3) 20%, rgba(255, 153, 0, 0.05) 80%);
+      box-shadow: 0 0 80px 20px rgba(255, 204, 102, 0.3);
+      z-index: 1;
+      animation: portalGlow 3s ease-in-out;
+      pointer-events: none;
+    }
+
+    @keyframes portalGlow {
+      0% { opacity: 0; transform: scale(0.8); }
+      100% { opacity: 1; transform: scale(1); }
+    }
+
+    .success-box {
+      position: relative;
+      background-color: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(10px);
+      padding: 40px 30px;
+      border-radius: 12px;
+      box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+      z-index: 2;
+      text-align: center;
+      max-width: 400px;
+      width: 90%;
+    }
+
+    .success-box h1 {
+      color: #00ffcc;
+      margin-bottom: 10px;
+    }
+
+    .success-box p {
+      font-size: 1.1rem;
+    }
+
+    a {
+      color: #ff9900;
+      text-decoration: none;
+      display: inline-block;
+      margin-top: 20px;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    footer {
+      position: absolute;
+      bottom: 20px;
+      text-align: center;
+      width: 100%;
+      color: #ccc;
+      font-size: 0.9rem;
+      z-index: 3;
+    }
+  </style>
+</head>
+<body>
+  <div class="portal"></div>
+  <div class="success-box">
+    <h1>Message Sent! 🛸</h1>
+    <p>🚀 Thanks for trying this Project. you can verify data in DynamoDB Table.....</p>
+    <a href="contactus.html">Go back to Contact Form</a>
+  </div>
+
+  <footer>
+    Project by KAWIN RAJ S 🚀
+  </footer>
+</body>
+</html>
