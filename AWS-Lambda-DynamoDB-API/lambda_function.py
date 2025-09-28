@@ -56,7 +56,7 @@ def insert_record(formbody):
     
     client = boto3.client('dynamodb')
     response = client.put_item(
-        TableName='kawintable',
+        TableName='table-lambda',
         Item=item
     )
     return response
